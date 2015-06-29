@@ -10,7 +10,7 @@ package com.blog.common.tools;
  **/
 public class CreateContentTool {
 	
-	private int max;
+	private int m_SSSSSSSSSSSax;
 	private int mix;
 	
 }
