@@ -1,0 +1,27 @@
+<div class="widget">
+	<h2 class="widgettitle" >{{greeting.homePage}}</h2>
+</div>
+<div class="content-part">
+	<div ng-repeat="data in datas">
+		<div class="abbreviated-post">
+			<div class="toad-thumbnail">
+				<img src="{{data.image}}" border="10" alt="">
+			</div>
+			<div class="toad-post-content">
+				<h4 class="post-name">
+					<a>{{data.title}}</a>
+				</h4>
+			</div>
+			<div class="toad-item-stats">{{data.createDate}}</div>
+			<p class="post-full ">{{data.content}}</p>
+			<div class="toad-item-introduction">
+				<span class="dddddddddd">{{content.author}}{{data.author}}</span>
+				<h class="sep">|</h>
+				<span class="">{{content.classification}}{{data.classification}}</span>
+				<h class="sep">|</h>
+				<span class="">{{content.read}}{{data.read}}</span>
+				<span class="more-read">{{content.readmore}}</span>
+			</div>
+		</div>
+	</div>
+</div>
