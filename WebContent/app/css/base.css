@@ -381,9 +381,6 @@ h4.post-name a:hover{
  	font-size: 12px;
   	text-align: right;
 }
-.sssssss{
-	height:18px;
-	width:18px;
-	border-radius: 18px;
-	text-align: center;
+.classification-content-part{
+    margin-bottom: 20px;
 }

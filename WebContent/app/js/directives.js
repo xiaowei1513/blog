@@ -6,7 +6,6 @@ var appDirective = angular.module('appDirective', []);
 
 //注射器加载完所有模块时，此方法执行一次
 appDirective.run(function($templateCache){
-	$('#google').carousel();
 });
 
 

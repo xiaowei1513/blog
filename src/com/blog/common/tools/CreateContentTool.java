@@ -10,7 +10,7 @@ package com.blog.common.tools;
  **/
 public class CreateContentTool {
 	
-	private int m_SSSSSSSSSSSax;
+	private int m_SSSSSSSSdsdsdsdsSSSax;
 	private int mix;
 	
 }

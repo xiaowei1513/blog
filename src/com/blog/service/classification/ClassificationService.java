@@ -22,4 +22,6 @@ public interface ClassificationService {
 	 */
 	public abstract List<TableContent> queryContentByClassification(String classification);
 
+	public abstract TableContent readByIdAction(Integer id);
+
 }

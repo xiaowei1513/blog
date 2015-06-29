@@ -51,18 +51,19 @@
 			</div>
 			<div class="toad-post-content">
 				<h4 class="post-name">
-					<a>{{data.title}}</a>
+					<span data-id="{{data.id}}" ng-click="setClassification($event.target)" >{{data.title}}</span>
 				</h4>
 			</div>
-			<div class="toad-item-stats">{{data.createDate}}</div>
+			<div class="toad-item-stats">{{data.createDate}}{{data.id}}</div>
+			
 			<p class="post-full ">{{data.content}}</p>
 			<div class="toad-item-introduction">
-				<span class="dddddddddd">{{content.author}}{{data.author}}</span>
+				<span >{{content.author}}{{data.author}}</span>
 				<h class="sep">|</h>
 				<span class="">{{content.classification}}{{data.classification}}</span>
 				<h class="sep">|</h>
 				<span class="">{{content.read}}{{data.read}}</span>
-				<span class="more-read">{{content.readmore}}</span>
+				<a ui-sref="index.readcontent" href="#" class="more-read" data-id="{{data.id}}" ng-click="readMostContent($event.target)" >{{content.readmore}}</a>
 			</div>
 		</div>
 	</div>

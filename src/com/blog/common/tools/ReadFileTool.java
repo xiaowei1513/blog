@@ -23,10 +23,10 @@ public class ReadFileTool  {
 	/**
 	 * »º³åÇø´óÐ¡
 	 */
-	private static int BLOCK = 1024;
+	private static int BLOCK = 1024*10;
 	
 	/**»º³åÇø*/
-	private static ByteBuffer buffer = ByteBuffer.allocate(BLOCK);
+	//private static ByteBuffer buffer = ByteBuffer.allocate(BLOCK);
 
 	/**×Ö·û±àÂë*/
 	private static String GB2312 = "GB2312";
@@ -59,6 +59,7 @@ public class ReadFileTool  {
 	 */
 	@SuppressWarnings("all")
 	public static String readSummary(String filepath) throws IOException {
+		ByteBuffer buffer = ByteBuffer.allocate(BLOCK);
 		FileInputStream stream = new FileInputStream(CONTENTPATH+filepath);
 		FileChannel channel = stream.getChannel();
 		channel.read(buffer);
@@ -77,6 +78,7 @@ public class ReadFileTool  {
 	 */
 	@SuppressWarnings("all")
 	public static String readContent(String filepath) throws IOException {
+		ByteBuffer buffer = ByteBuffer.allocate(BLOCK);
 		FileInputStream stream = new FileInputStream(CONTENTPATH+filepath);
 		FileChannel channel = stream.getChannel();
 		channel.read(buffer);

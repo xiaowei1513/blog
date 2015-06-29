@@ -47,4 +47,11 @@ public class TableContentDao {
 		criteria.add(Restrictions.eq("classification", classification));
 		return criteria.list();
 	}
+
+	public TableContent queryContentById(Integer id) {
+		session = sessionFactory.getCurrentSession();
+		Criteria criteria = session.createCriteria(TableContent.class);
+		criteria.add(Restrictions.eq("id", id));
+		return (TableContent) criteria.list().get(0);
+	}
 }

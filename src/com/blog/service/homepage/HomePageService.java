@@ -17,4 +17,6 @@ public interface HomePageService {
 
 	public  List<TableContent> getHomePageContent();
 
+	public TableContent readByIdAction(Integer id);
+
 }

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.blog.entity.TableContent;
@@ -26,9 +27,16 @@ public class ClassificationController {
 	@Autowired
 	private ClassificationService classificationService ;
 	
-	@RequestMapping(value = "classification.action")
-	public @ResponseBody List<TableContent> hello(String classification,HttpServletResponse response) {
+
+	
+	@RequestMapping(value = "classification.summary.action")
+	public @ResponseBody List<TableContent> summaryAction(String classification,HttpServletResponse response) {
 		
 		return classificationService.queryContentByClassification(classification);
+	}
+
+	@RequestMapping(value = "classification.readById.action")
+	public @ResponseBody TableContent readByIdAction(@RequestParam("id" ) Integer id,HttpServletResponse response) {
+		return classificationService.readByIdAction(id);
 	}
 }

@@ -24,7 +24,7 @@ public class HomePageController {
 	@Autowired
 	private HomePageService serviced;
 	
-	@RequestMapping(value = "home.action")
+	@RequestMapping(value = "home.summary.action")
 	public @ResponseBody List<TableContent> hello(String parameter,HttpServletResponse response) {
 		return serviced.getHomePageContent();
 	}

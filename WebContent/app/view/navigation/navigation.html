@@ -18,20 +18,20 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a ui-sref=".home" href=""ng-bind='greeting.homePage'></a></li>
-				<li><a ui-sref=".classification" href="#" ng-bind='greeting.safe.safe'  ng-click="setClassification('safe.safe')"></a></li>
-				<li><a ui-sref=".classification" href="#" ng-bind='greeting.study' ng-model="study"></a></li>
-				<li><a ui-sref=".resume" href="" ng-bind='greeting.marketing'></a></li>
-				<li><a ui-sref=".resume" href="" ng-bind='greeting.networkMarketing'></a></li>
-				<li><a ui-sref=".resume" href="" ng-bind='greeting.seo'></a></li>
-				<li><a ui-sref=".resume" href="" ng-bind='greeting.sharingTechnology'></a></li>
-				<li><a ui-sref=".resume" href="" ng-bind='greeting.chongqing'></a></li>
+				<li><a ui-sref="index.home" href="" ng-bind='greeting.homePage'></a></li>
+				<li><a ui-sref="index.classification" href="#" ng-bind='greeting.safe.safe'  ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+				<li><a ui-sref="index.classification" href="#" ng-bind='greeting.study' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+				<li><a ui-sref="index.classification" href="" ng-bind='greeting.marketing' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+				<li><a ui-sref="index.classification" href="" ng-bind='greeting.networkMarketing' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+				<li><a ui-sref="index.classification" href="" ng-bind='greeting.seo' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+				<li><a ui-sref="index.classification" href="" ng-bind='greeting.sharingTechnology' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+				<li><a ui-sref="index.classification" href="" ng-bind='greeting.chongqing' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
 				<li class="dropdowen">
-					<a ui-sref=".resume" href="#"	class="dropdown-toggle" data-toggle="dropdown"ng-bind="greeting.personalProfile.personalProfile"></a>
+					<a ui-sref=".classification" href="#"	class="dropdown-toggle" data-toggle="dropdown" ng-bind="greeting.personalProfile.personalProfile" ng-click="setClassification($event.target)" name="greeting.safe.safe"></a>
 					<ul class="dropdown-menu nav-stacked" role="menu">
-						<li><a ui-sref=".resume" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.resume'></a></li>
-						<li><a ui-sref=".resume" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.aboutWebSite'></a></li>
-						<li><a ui-sref=".resume" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.contactMe'></a></li>
+						<li><a ui-sref="index.classification" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.resume' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+						<li><a ui-sref="index.classification" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.aboutWebSite' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+						<li><a ui-sref="index.classification" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.contactMe' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
 					</ul>
 				</li>
 			</ul>

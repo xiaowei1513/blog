@@ -52,4 +52,17 @@ public class ClassificationServiceImpl implements ClassificationService{
 
 		return returnList;		
 	}
+
+	@Override
+	public TableContent readByIdAction(Integer id) {
+		// TODO Auto-generated method stub
+		TableContent content =tableContentDao.queryContentById(id);
+		try {
+			content.setContent(readFileTool.readContent(content.getFileName()));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return content;
+	}
 }

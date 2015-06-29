@@ -39,19 +39,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
 				templateUrl : "app/view/home/maincontent.html"
 			}
 		}
+	}).state('index.readcontent', {
+		url : "/readcontent",
+		views : {
+			'' : {
+				templateUrl : "app/view/content/content.html",
+				controller : 'Content',
+			}
+		}
 	}).state('index.classification', {
 		url : "/classification",
-		templateUrl : '/app/view/classification/classification.html',
-		controller : 'Classification',
-	}).state('state2.list', {
-	}).state('index.resume', {
-		url : "/resume",
-		templateUrl : 'app/view/resume.html',
-	}).state('state2.list', {
-		url : "/list",
-		templateUrl : "partials/state2.list.html",
-		controller : function($scope) {
-			$scope.things = [ "A", "Set", "Of", "Things" ];
+		views : {
+			'' : {
+				controller : 'Classification',
+				templateUrl : '/app/view/classification/classification.html',
+			}
 		}
-	});
+			
+	})
 });

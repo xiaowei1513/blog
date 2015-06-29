@@ -1,11 +1,6 @@
 var appController = angular.module('appController', []);
 
-appController.factory('data', function() {
-	  return {
-		  classification: "homePage"
-	  }
-});
-appController.controller('Navigation', [ '$scope','$http', function($scope,$http,$data) {
+appController.controller('Navigation', [ '$scope','$http','dataService', function($scope,$http,dataService) {
 	$scope.greeting = {
 		search : '搜索',
 		homePage : '网站首页',
@@ -26,8 +21,10 @@ appController.controller('Navigation', [ '$scope','$http', function($scope,$http
 			contactMe:'联系我'
 		}
 	};
-	$scope.setClassification = function (classification) {
-		Data.classification = classification;
+	$scope.setClassification =function(target){
+		dataService.key = target.name;
+		dataService.value = target.text;
+		dataService.defaultData.loaction = target.text;
 	};
 } ]);
 
@@ -42,22 +39,15 @@ appController.controller('SideBox', [ '$scope', function($scope) {
 	};
 } ]);
 
-appController.controller('WorkingLife', [ '$scope', function($scope) {
-	$scope.greeting = {
-		title : '工作生活',
-		cooperation : '广告投放及合作：',
-		qqTalk : '  QQ交谈',
-		popularArticle:'热门文章',
-		weixin:'小伟的微信',
-		randomArticle:'随机文章'
-	};
-} ]);
-
-
 appController.controller('RollPage', [ '$scope','$http', function($scope) {
 	
 } ]);
-appController.controller('HomePage', [ '$scope','$http', function($scope,$http) {
+appController.controller('HomePage', [ '$scope','$http', 'dataService',function($scope,$http,dataService) {
+	$scope.readMostContent =function(target){
+		dataService.key = target.name;
+		dataService.value = target.textContent;
+		dataService.content.id = target.dataset.id;
+	};
 	$scope.content={
 		readmore:"阅读全文",
 		author:"作者:",
@@ -66,17 +56,52 @@ appController.controller('HomePage', [ '$scope','$http', function($scope,$http) 
 	};
 	$http({
 		method:'POST',
-		url:'home.action'
+		url:'home.summary.action'
 	}).success(function(data,status,headers,config){
 		$scope.datas = data;
 	});
 } ]);
-appController.controller('Classification', [ '$scope','$http', function($scope,$http,data) {
-	$scope.data = data;
+appController.controller('Classification', [ '$scope','$http','dataService', function($scope,$http,dataService) {
+	$scope.target = dataService;
+	$scope.content = {
+		readmore : "阅读全文",
+		author : "作者:",
+		classification : "分类:",
+		read : "阅读次数:"
+	};
 	$http({
 		method:'POST',
-		url:'classification.action'
+		url:'classification.summary.action'
 	}).success(function(data,status,headers,config){
 		$scope.datas = data;
+	});
+	$scope.readMostContent =function(target){
+		dataService.key = target.name;
+		dataService.value = target.textContent;
+		dataService.content.id = target.dataset.id;
+	}
+} ]);
+appController.controller('Content', [ '$scope','$http','dataService', function($scope,$http,dataService) {
+	$scope.target = dataService;
+	$scope.content = {
+			readmore : "阅读全文",
+			author : "作者:",
+			classification : "分类:",
+			read : "阅读次数:"
+		};
+	$scope.greeting = {
+		title : '工作生活',
+		cooperation : '广告投放及合作：',
+		qqTalk : '  QQ交谈',
+		popularArticle:'热门文章',
+		weixin:'小伟的微信',
+		randomArticle:'随机文章'
+	};
+	$http({
+		method:'POST',
+		url:'classification.readById.action',
+		params: {id:dataService.content.id}
+	}).success(function(data,status,headers,config){
+		$scope.data = data;
 	});
 } ]);

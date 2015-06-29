@@ -1,9 +1,24 @@
 var appServices = angular.module('appServices', []);
 
-appServices.service('bookStoreService_1', ['$scope',
-    function($scope) {}
-]);
+appServices.factory('dataService', [function(){
+    var serviceInstance = {
+    		defaultData:{
+    			maskLoc:"当前位置 :",
+    			readmore : "阅读全文",
+    			loaction:""
+    		},
+    		key :"",
+    		value:'',
+    		home:"首页",
+    		content:{
+    			id:''
+    		}
+    		
+    };
+    // 我们的第一个服务
+    return serviceInstance;
+}]);
 
-appServices.service('bookStoreService_2', ['$scope',
+appServices.service('loadContentService', ['$scope',
     function($scope) {}
 ]);

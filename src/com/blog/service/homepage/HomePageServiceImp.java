@@ -51,4 +51,9 @@ public class HomePageServiceImp implements HomePageService {
 
 		return returnList;
 	}
+	@Override
+	public TableContent readByIdAction(Integer id) {
+		TableContent content = tableContentDao.queryContentById(id);
+		return null;
+	}
 }
