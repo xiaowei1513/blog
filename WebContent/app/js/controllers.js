@@ -4,14 +4,16 @@ appController.controller('Navigation', [ '$scope','$http','dataService', functio
 	$scope.greeting = {
 		search : '搜索',
 		homePage : '网站首页',
-		safe : {
-			safe : '工作生活',
-			workingLog : '工作日志',
-		},
-		study:'读书学习',
+		life : "生活",
+		work : "工作",
+		study:'读书',
 		marketing:'市场营销',
 		networkMarketing:'网络营销',
 		seo : 'SEO',
+		sports : '体育/运动',
+		healthy : '医疗/健康',
+		design : '网站设计',
+		excerpt : '经典摘录',
 		sharingTechnology : '技术分享',
 		chongqing : '重庆',
 		personalProfile :{
@@ -104,4 +106,8 @@ appController.controller('Content', [ '$scope','$http','dataService', function($
 	}).success(function(data,status,headers,config){
 		$scope.data = data;
 	});
+} ]);
+appController.controller('Mainsidebox', [ '$scope','$http','dataService', function($scope,$http,dataService) {
+	$scope.target = dataService;
+	
 } ]);

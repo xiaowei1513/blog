@@ -1,47 +1,5 @@
-<!--首页滚动图片播放 -->
-<div id="ad-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-	<roll></roll>
-	<div class="carousel-inner ">
-		<div class="item active ">
-			<img src="images/chrome-big.jpg" alt="1 slide">
-			<div class="">
-				<div class="carousel-caption">
-					This is my life
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<img src="/images/safari-big.jpg" alt="3 slide">
-
-			<div class="">
-				<div class="carousel-caption">
-					This is my life
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<img src="images/opera-big.jpg" alt="4 slide">
-			<div class="">
-				<div class="carousel-caption">
-					This is my life
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<img src="images/ie-big.jpg" alt="5 slide">
-			<div class="">
-				<div class="carousel-caption">
-					This is my life
-				</div>
-			</div>
-		</div>
-	</div>
-	<a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span class="glyphicon-chevron-right fa fa-chevron-left"></span></a>
-    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span class="glyphicon-chevron-right fa fa-chevron-right"></span></a>
-</div>
-
 <div class="post-filters clearfix">
-	<span class="active"> Most Recent </span>
+	<span> Most Recent </span>
 </div>
 <div class="content-part" ng-controller="HomePage">
 	<div ng-repeat="data in datas">
@@ -51,10 +9,10 @@
 			</div>
 			<div class="toad-post-content">
 				<h4 class="post-name">
-					<span data-id="{{data.id}}" ng-click="setClassification($event.target)" >{{data.title}}</span>
+					<span ui-sref="index.readcontent" href="#" data-id="{{data.id}}" ng-click="readMostContent($event.target)" >{{data.title}}</span>
 				</h4>
 			</div>
-			<div class="toad-item-stats">{{data.createDate}}{{data.id}}</div>
+			<div class="toad-item-stats">{{data.createDate}}</div>
 			
 			<p class="post-full ">{{data.content}}</p>
 			<div class="toad-item-introduction">
