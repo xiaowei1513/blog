@@ -68,7 +68,7 @@ appDirective.directive("mainsidebox", function($templateCache,$timeout) {
 				$timeout(function() {
 					//首页图片自动轮播间隔5秒。
 					//startMove(30000);
-					$('.carousel').carousel({interval: 3000 });
+					//$('.carousel').carousel({interval: 3000 });
                 }, 1000);
 	            element.bind("mouseenter", function() {
 	            });

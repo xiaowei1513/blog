@@ -37,7 +37,7 @@ public class TableContent implements Serializable {
 	@Column(name = "IMAGE")
 	private String image;
 
-	@Column(name = "READ")
+	@Column(name = "READ_COUNT")
 	private int read;
 
 	@Column(name = "TITLE")

@@ -52,6 +52,10 @@ public class TableContentDao {
 		session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(TableContent.class);
 		criteria.add(Restrictions.eq("id", id));
-		return (TableContent) criteria.list().get(0);
+		if (!criteria.list().isEmpty()){
+			return (TableContent) criteria.list().get(0);
+		} else {
+			return null;
+		}
 	}
 }

@@ -3671,6 +3671,11 @@ fieldset[disabled] .navbar-default-index .btn-link:focus {
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
 }
+
+.carousel-indicators li:hover {
+ 	opacity: 0.8;
+	box-shadow: 0 0 5px #DDD;
+}
 .carousel-indicators .active {
   width: 75px;
   height: 40px;
