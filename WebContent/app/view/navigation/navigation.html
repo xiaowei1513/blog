@@ -1,7 +1,7 @@
 <div id="top">
-	<div class="m-midnav" >
+	<div class="m-midnav">
 		<div class="g-container">
-			<a href="http://open.163.com"><h1 class="logo left notxt">网易公开课</h1></a>
+			<a href=""><h1 class="logo left notxt">网易公开课</h1></a>
 			<div class="left subtxt"></div>
 			<form accept-charset="utf-8" id="" target="_blank" action="">
 				<div class="search right rel ">
@@ -25,23 +25,23 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav ">
-				<li class="left"><a ui-sref="index.index" href="" ng-bind='greeting.homePage' class="active"></a></li>
-				<li class="left"><a ui-sref="index.classification" href="#"  ng-click="setClassification($event.target)" name="greeting.safe.safe">DataSourse</a></li>
-				<li class="left"><a ui-sref="index.classification" href="#" ng-click="setClassification($event.target)" name="greeting.safe.safe">Html</a></li>
-				<li class="left"><a ui-sref="index.classification" href=""  ng-click="setClassification($event.target)" name="greeting.safe.safe">CSS</a></li>
-				<li class="left"><a ui-sref="index.classification" href=""  ng-click="setClassification($event.target)" name="greeting.safe.safe">ExtJS</a></li>
-				<li class="left"><a ui-sref="index.classification" href=""  ng-click="setClassification($event.target)" name="greeting.safe.safe">Angularjs</a></li>
-				<li class="left"><a ui-sref="index.classification" href=""  ng-click="setClassification($event.target)" ng-bind='greeting.personalProfile.aboutWebSite' name="greeting.safe.safe"></a></li>
-				<li class="left"><a ui-sref="index.classification" href=""  ng-click="setClassification($event.target)" name="greeting.safe.safe">ChongQing</a></li>
-				<li class="left"><a ui-sref="index.classification" href=""  ng-click="setClassification($event.target)"  ng-bind='greeting.design' name="greeting.safe.safe"></a></li>
+				<li class="left"><a ui-sref="index.index" href="" class="active" ng-bind='greeting.index' ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.dataBase' href="#" ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.html' href="#" ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.css' href=""  ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.extJs' href=""  ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.angularJS' href=""  ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.websiteDesign' href=""  ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.seo' href=""  ng-click="action($event.target)"></a></li>
+				<li class="left"><a ui-sref="index.classification" ng-bind='greeting.chongQing' href=""  ng-click="action($event.target)" ></a></li>
 				<li class="dropdowen right ">
-					<a ui-sref=".classification" href="#" style="color: #ffbc62;"	class="dropdown-toggle" data-toggle="dropdown"  ng-click="setClassification($event.target)" name="greeting.safe.safe">{{greeting.personalProfile.personalProfile}}<span class="caret"></span></a>
+					<a ui-sref=".classification" href="#" style="color: #ffbc62;"class="dropdown-toggle" data-toggle="dropdown"  ng-click="action($event.target)" >{{greeting.personalProfile.personalProfile}}<span class="caret"></span></a>
 					<ul class="dropdown-menu nav-stacked" role="menu">
-						<li><a ui-sref="index.classification" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.contactMe' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a></li>
+						<li><a ui-sref="index.classification" href="#feature-tab"data-tab="tab-chrome" ng-bind='greeting.personalProfile.personalProfile' ng-click="action($event.target)" ></a></li>
 					</ul>
 				</li>
 				<li class="right">
-					<a ui-sref="index.classification" href="#feature-tab" style="color: #ffbc62;" data-tab="tab-chrome" ng-bind='greeting.personalProfile.aboutWebSite' ng-click="setClassification($event.target)" name="greeting.safe.safe"></a>
+					<a ui-sref="index.classification" href="#feature-tab" style="color: #ffbc62;" data-tab="tab-chrome" ng-bind='greeting.aboutWebSite' ng-click="action($event.target)" name="greeting.safe.safe">sdsdsdsd</a>
 				</li>
 			</ul>
 		</div>

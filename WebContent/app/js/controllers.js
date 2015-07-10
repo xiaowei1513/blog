@@ -1,33 +1,31 @@
 var appController = angular.module('appController', []);
 
 appController.controller('Navigation', [ '$scope','$http','dataService', function($scope,$http,dataService) {
-	$scope.greeting = {
-		search : '搜索',
-		homePage : '网站首页',
-		life : "生活",
-		work : "工作",
-		study:'读书',
-		marketing:'市场营销',
-		networkMarketing:'网络营销',
-		seo : 'SEO',
-		sports : '体育/运动',
-		healthy : '医疗/健康',
-		design : '网站设计',
-		excerpt : '经典摘录',
-		sharingTechnology : '技术分享',
-		chongqing : '重庆',
-		personalProfile :{
-			personalProfile:'个人简介',
-			resume:'个人简历',
-			aboutWebSite:'关于本站',
-			contactMe:'联系我'
-		}
-	};
-	$scope.setClassification =function(target){
-		dataService.key = target.name;
-		dataService.value = target.text;
-		dataService.defaultData.loaction = target.text;
-	};
+			$scope.greeting = {
+				index : '网站首页',
+				dataBase : 'DataBase',
+				html : 'Html',
+				css : 'Css',
+				extJs : 'ExtJs',
+				angularJS : 'AngularJS',
+				websiteDesign : '网站设计',
+				seo:'SEO',
+				chongQing : 'ChongQing',
+				aboutWebSite : '关于本站',
+				subTitle : {
+					news : '最新日志',
+					hot : '热门日志',
+				},
+				personalProfile : {
+					personalProfile : '个人简介',
+					connection : '联系方式'
+				}
+			};
+			$scope.action = function(target) {
+				dataService.key = target.name;
+				dataService.value = target.text;
+				dataService.defaultData.loaction = target.text;
+			};
 } ]);
 
 appController.controller('SideBox', [ '$scope', function($scope) {

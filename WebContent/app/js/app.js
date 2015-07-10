@@ -1,17 +1,7 @@
 var app = angular.module('app', [ 'ui.router', 'ngAnimate', 'appServices',
 		'appController',  'appDirective' ]);
 
-/*
- * app.config(function($routeProvider) { $routeProvider.when('/hello', {
- * templateUrl: 'app/view/hello.html', controller: 'HelloCtrl' }).when('/list',{
- * templateUrl:'app/view/bookList.html', controller:'BookListCtrl'
- * }).otherwise({ redirectTo: '/hello' }) });
- */
-app.controller('CurTimeController', function($scope) {
-    $scope.getCurrentSecond = function() {
-        $scope.x = new Date().getSeconds();
-    };
-})  
+
 app.config(function($stateProvider, $urlRouterProvider) {
 	//
 	// For any unmatched url, redirect to /state1
