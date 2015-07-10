@@ -85,18 +85,12 @@ button {
 	outline: none;
 }
 
-
 .content {
 	width: 1140px;
 	margin: 0 auto;
-	margin-top: 15px;
-	background-color: #c1e735;
+	background-color: #ffffff;
 }
-#main-box {
-	width: 1140px;
-	overflow: hidden;
-	float: left;
-}
+
 .content-part-top,.content-part {
     position: relative;
     margin-bottom: 20px;

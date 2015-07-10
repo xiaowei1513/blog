@@ -15,34 +15,16 @@ app.controller('CurTimeController', function($scope) {
 app.config(function($stateProvider, $urlRouterProvider) {
 	//
 	// For any unmatched url, redirect to /state1
-	$urlRouterProvider.otherwise("/index/home");
+	$urlRouterProvider.otherwise("/index/index");
 	//
 	// Now set up the states
 	$stateProvider.state('index', {
 		url : "/index",
-		views : {
-			'' : {
-				templateUrl : "app/view/navigation/navigation.html",
-				controller : 'Navigation',
-			},
-			'side@index':{
-				templateUrl : "app/view/side/side.html",
-				controller : 'SideBox',
-			}
-		}
-	}).state('index.home', {
-		url : "/home",
-		views : {
-			'' : {
-				templateUrl : "app/view/home/home.html",
-			},
-			'side@index.home':{
-				templateUrl : "app/view/side/side.html",
-			},
-			'homemaincontent@index.home':{
-				templateUrl : "app/view/home/maincontent.html"
-			}
-		}
+		templateUrl : "app/view/navigation/navigation.html",
+		controller : 'Navigation',
+	}).state('index.index', {
+		url : "/index",
+		templateUrl : "app/view/index/index.html",
 	}).state('index.readcontent', {
 		url : "/readcontent",
 		views : {

@@ -32,10 +32,13 @@ appDirective.run(["$templateCache", function($templateCache) {
 	    '</div>'
 	    );
 	}]);
-//首页图片加载
-appDirective.directive("mainsidebox", function($templateCache,$timeout) {
+//首页
+appDirective.directive("indexbox", function($templateCache,$timeout) {
 	var mainsidebox ={
 			restrict: 'AECM',	//匹配模式
+			scope :{
+				
+			},
 			controller: function($scope,$http,$timeout ) {
 				$scope.sourse = {
 						'new':'最新日志',
@@ -51,9 +54,10 @@ appDirective.directive("mainsidebox", function($templateCache,$timeout) {
 					$scope.data = data;
 				});
 			},
-			templateUrl:'app/view/sidebox/mainsidebox.html',
+			templateUrl:'app/view/index/indexbox.html',
+			
 			link:function(scope, element, attrs ){
-/*				$(document).on('mouseenter.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
+				$(document).on('mouseenter.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
 					var $this   = $(this), href
 					var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
 					var options = $.extend({}, $target.data(), $this.data())
@@ -64,42 +68,16 @@ appDirective.directive("mainsidebox", function($templateCache,$timeout) {
 					  $target.data('bs.carousel').to(slideIndex)
 					}
 					e.preventDefault()
-				});*/
+				});
 				$timeout(function() {
 					//首页图片自动轮播间隔5秒。
 					//startMove(30000);
-					//$('.carousel').carousel({interval: 3000 });
+					$('.carousel').carousel({interval: 3000 });
                 }, 1000);
 	            element.bind("mouseenter", function() {
 	            });
 	            element.on('click', function(e) {
 		        });
-	            var timer = null;//时间对象
-	            var alpha = 3000;//透明度初始值
-	            var color =0;
-	            function startMove(iTarget){
-	               clearInterval(timer);//清空时间对象
-	               timer = setInterval(function(){
-	                  if(color>=defaultColor.length){
-	                	  color=0;  
-	                  }
-	                  var speed = 0;
-	                  if(alpha < iTarget){
-	                     speed =5;
-	                  }else{
-	                     speed = -5;
-	                  }
-	                  if(alpha == iTarget){
-	                     clearInterval(timer);
-	                  }else{
-	                     //alpha +=speed; //透明度值增加效果
-	                    // oDiv.style.filter = 'alpha(opacity:'+alpha+')'; //设置IE透明度
-	                     //oDiv.style.opacity = alpha / 100; //设置其他浏览器
-	                     oDiv.style.background =  defaultColor[color]; //设置其他浏览器
-	                     color++;
-	                  }
-	               },3000);
-	            }
 			}
 
 	};
