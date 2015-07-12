@@ -32,19 +32,22 @@ appDirective.run(["$templateCache", function($templateCache) {
 	    '</div>'
 	    );
 	}]);
+
 //首页
 appDirective.directive("indexbox", function($templateCache,$timeout) {
 	var mainsidebox ={
 			restrict: 'AECM',	//匹配模式
-			scope :{
-				
-			},
 			controller: function($scope,$http,$timeout ) {
-				$scope.sourse = {
-						'new':'最新日志',
-						'hot':'热门日志',
-						'comm':'联系方式',
-						'color':'#c1e735',
+
+				$scope.title={
+						fleetoftime:'匆匆那年',
+						accumulation:'为你的生命多积累',
+				};
+				//段落名称
+				$scope.paragraph={
+						title:{
+							paragraphOne:'知识帝邀你观看“课随你变”观看另一种可能性',
+						}
 				};
 				$http({
 					method:'POST',
@@ -57,7 +60,7 @@ appDirective.directive("indexbox", function($templateCache,$timeout) {
 			templateUrl:'app/view/index/indexbox.html',
 			
 			link:function(scope, element, attrs ){
-				$(document).on('mouseenter.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
+				$(document).on('mouseenter.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {/*
 					var $this   = $(this), href
 					var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
 					var options = $.extend({}, $target.data(), $this.data())
@@ -68,11 +71,11 @@ appDirective.directive("indexbox", function($templateCache,$timeout) {
 					  $target.data('bs.carousel').to(slideIndex)
 					}
 					e.preventDefault()
-				});
+				*/});
 				$timeout(function() {
 					//首页图片自动轮播间隔5秒。
 					//startMove(30000);
-					$('.carousel').carousel({interval: 3000 });
+					//$('.carousel').carousel({interval: 3000 });
                 }, 1000);
 	            element.bind("mouseenter", function() {
 	            });

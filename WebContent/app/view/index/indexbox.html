@@ -1,12 +1,13 @@
- <div class="m-slidebox" id="main-cotent-side-box" style="background: rgb(6, 13, 18); display:block; z-index: 1; opacity: 10;">
+ <div class="m-slidebox rel" id="main-cotent-side-box" style="background: rgb(6, 13, 18); display:block; z-index: 1; opacity: 10;">
 	<div id="main-ad-carousel" class="carousel slide  "   data-ride="carousel" data-interval="5000" ><a></a>
 		<div class="main-content-ol "> 
 			<ol class="carousel-indicators ">
-				<li data-target="#main-ad-carousel" data-slide-to="0" class="active" style="background-image:url(images/abc-title.jpg)"></li>
-				<li data-target="#main-ad-carousel" data-slide-to="1" style="background-image:url(images/image-a-title.jpg);"></li>
-				<li data-target="#main-ad-carousel" data-slide-to="2" style="background-image:url(images/fengji.jpg)"></li>
-				<li data-target="#main-ad-carousel" data-slide-to="3" style="background-image:url(images/image-c-title.jpg)"></li>
-				<li data-target="#main-ad-carousel" data-slide-to="4" style="background-image:url(images/image-b-title.jpg)"></li>
+				<li data-target="#main-ad-carousel" data-slide-to="0" class="active" style="background-image:url(images/study-title-a.gif)"></li>
+				<li data-target="#main-ad-carousel" data-slide-to="1" style="background-image:url(images/abc-title.jpg)"></li>
+				<li data-target="#main-ad-carousel" data-slide-to="2" style="background-image:url(images/image-a-title.jpg);"></li>
+				<li data-target="#main-ad-carousel" data-slide-to="3" style="background-image:url(images/fengji.jpg)"></li>
+				<li data-target="#main-ad-carousel" data-slide-to="4" style="background-image:url(images/image-c-title.jpg)"></li>
+				<li data-target="#main-ad-carousel" data-slide-to="5" style="background-image:url(images/image-b-title.jpg)"></li>
 			</ol>
 			<div class="ztest">
 	 	 	    <div class=" tabwrap f-pa main-content " id="j-mainslide-tabs">
@@ -29,6 +30,11 @@
 		<div class="carousel-inner ">
 			<div class="item active"  style="background-color:rgb(240, 240, 240) ">
 				<div class="main-content" >
+					<img ng-src ="images/study.gif" alt="4 slide">
+				</div>
+			</div>
+			<div class="item"  style="background-color:rgb(240, 240, 240) ">
+				<div class="main-content" >
 					<img ng-src ="images/abc.jpg" alt="4 slide">
 				</div>
 			</div>
@@ -42,7 +48,7 @@
 				 <img ng-src="images/chrome-big.jpg" alt="2 slide" >
 				</div>
 			</div>
-			<div class="item"style="background: rgb(97, 2, 3)">
+			<div class="item" style="background: rgb(97, 2, 3)">
 				<div class="main-content">
 					<img ng-src="images/image-c.jpg" alt="3 slide" >
 				</div>
@@ -57,39 +63,56 @@
 </div> 
 
 
-<div class="content"> 
-	<div class="post-filters clearfix">
-		<span>When you feel like quitting, think about why you started. </span>
-	</div>
-	<div class="content-part" ng-controller="HomePage">
-		<div ng-repeat="data in datas">
-			<div class="abbreviated-post">
-				<div class="toad-thumbnail">
-					<div class="bin">
-						<h4 class="f-fl f-thide">article.yeeyan.org</h4>
-					</div>
-					<img src="images/image-a.jpg" border="10" alt="">
-				</div>
-				<div class="toad-thumbnail">
-					<div class="bin">
-						<h4 class="f-fl f-thide">This is a </h4>
-					</div>
-					<img src="images/chrome-big.jpg" border="10" alt="">
-				</div>
-				<div class="toad-thumbnail">
-					<div class="bin">
-						<h4 class="f-fl f-thide">We found there were some </h4>
-					</div>
-					<img src="images/image-c.jpg" border="10" alt="">
-				</div>
-				<div class="toad-thumbnail">
-					<div class="bin">
-						<h4 class="f-fl f-thide">Hopefully,www.cnblogs.com</h4>
-					</div>
-					<img src="images/image-b.jpg" border="10" alt="">
-				</div>
-				<div class="toad-post-content"></div>
-			</div>
+<div class="content" style="background-color: #fffff" > 
+	<div class="container" >
+		<div class="post-filters clearfix" >
+			<span class="f-fl">{{paragraph.title.paragraphOne}}</span>
 		</div>
+		<div class="">
+			<a class="toad-thumbnail">
+				<span class="mask"></span>
+				<span class="bin">{{title.fleetoftime}}</span>
+				<img ng-src="image/simplify/fleetoftime.jpg" >
+			</a>
+			<a class="toad-thumbnail">
+				<span class="mask"></span>
+				<span class="bin">{{title.accumulation}}</span>
+				<img src="images/chrome-big.jpg" border="10" alt="">
+			</a>
+			<a class="toad-thumbnail">
+				<span class="mask"></span>
+				<span class="bin">{{title.fleetoftime}} </span>
+				<img src="images/image-c.jpg" border="10" alt="">
+			</a>
+			<a class="toad-thumbnail">
+				<span class="mask"></span>
+				<span class="bin">{{title.fleetoftime}}</span>
+				<img src="images/image-b.jpg" border="10" alt="">
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="content" style="background-color: #DfD"> 
+	<div class="container"  ng-controller="HomePage" >
+		<div class="post-filters clearfix">
+			<span>When you feel like quitting, think about why you started. </span>
+		</div>
+		<div class="post-filters clearfix">
+			<span>When you feel like quitting, think about why you started. </span>
+		</div>
+		<div class="post-filters clearfix">
+			<span>When you feel like quitting, think about why you started. </span>
+		</div>
+		<div class="post-filters clearfix">
+			<span>When you feel like quitting, think about why you started. </span>
+		</div>
+		<div class="post-filters clearfix">
+			<span>When you feel like quitting, think about why you started. </span>
+		</div>
+		<div class="post-filters clearfix">
+			<span>When you feel like quitting, think about why you started. </span>
+		</div>
+		
 	</div>
 </div>

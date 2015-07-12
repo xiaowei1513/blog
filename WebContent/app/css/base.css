@@ -86,19 +86,16 @@ button {
 }
 
 .content {
-	width: 1140px;
-	margin: 0 auto;
-	background-color: #ffffff;
+  margin: 20px 0 20px 0;
+  background-color: #ffffff;
+  height: auto;
 }
 
 .content-part-top,.content-part {
     position: relative;
     margin-bottom: 20px;
 }
-.content-part{
-	
-	padding-top: 10px;
-}
+
 #side-box {
 	float: right;
 	width: 260px;
@@ -180,24 +177,14 @@ button {
 }
 
 .post-filters{
-	margin:10px 0px 0px;
+	padding:15px 0;
   	color: #239c48 !important;
   	text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 18px
 }
 
-.abbreviated-post {
-  	border-bottom: solid 1px #ededed;
-	padding-bottom: 15px;
-	margin-bottom: 18px; 
-	position: relative;
-	min-height: 90px;
-}
 
-.abbreviated-post  {
-	font-size: 13px;
-}
 
 .toad-thumbnail {
   width: 25%;
@@ -208,21 +195,20 @@ button {
 	width: 100%;
 	height: 100%;
 	border: 0px;
+	padding: 0 1px 0 0;
+	/* border: 1px solid #DDD; */
+	overflow: hidden;
 }
 
 img:hover{
 	opacity: 0.9;
 	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=1);
 	-moz-opacity:0.1;
-	opacity: 0.8;
 }
-.toad-thumbnail img{
-	padding: 0 1px 0 0;
-	/* border: 1px solid #DDD; */
-	overflow: hidden;
-}
-.toad-thumbnail img:hover{
 
+.toad-thumbnail img:hover{
+	opacity: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=1);
 	box-shadow: 0 0 1px #DDD;
 	overflow: hidden;
 }
@@ -340,13 +326,6 @@ h4.post-name a:hover{
   z-index: 700;
 }
 
-.rel, .f-pr {
-  position: relative;
-}
-.clear, .f-cb {
-  zoom: 1;
-}
-
 .search {
   height: 14px;
   width: 370px;
@@ -419,13 +398,29 @@ h4.post-name a:hover{
 	text-align: left;
 	background-color: #ffffff;
 }
+
 .toad-thumbnail .bin  {
 	position: absolute;
-	text-indent: 18px;
-	margin: 110px 0 0 0;
-	line-height: 52px;
-	width: 260px;
+	text-indent: 25px;
+	margin:125px 0 0 0;
+	line-height: 18px;
 	font-size: 18px;
 	color: #fff;
+/* 	background-color:#ffffff; */
 	text-shadow: 0 1px 3px #444;
-	}
+}
+.toad-thumbnail .mask {
+	width: 285px;
+	height: 164px;
+}
+.mask  {
+	position: absolute;
+	background-color: #1f6740;
+	opacity: 0;
+	filter: alpha(opacity = 0.1);
+	-webkit-transition: box-shadow .2s ease-in 0;
+	-moz-transition: box-shadow .2s ease-in 0s;
+	transition: box-shadow .2s ease-in 0s;}
+.mask:hover {
+  opacity: 0.5;
+}

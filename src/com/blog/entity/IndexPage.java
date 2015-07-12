@@ -11,21 +11,13 @@ import java.io.Serializable;
  * 创建时间:2015年6月18日 上午10:00:01    
  * 类说明: 首页各部分数据来源
  **/
-public class HomePage implements Serializable {
+public class IndexPage implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 8014033590587145383L;
 	
-	private String user;
-
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
-	}
+	
 
 }

@@ -1,5 +1,6 @@
 var appController = angular.module('appController', []);
 
+//导航栏控制器
 appController.controller('Navigation', [ '$scope','$http','dataService', function($scope,$http,dataService) {
 			$scope.greeting = {
 				index : '网站首页',
